@@ -54,4 +54,5 @@
       background-color: #35495e;
     }
   }
-<style>
+}
+</style>
