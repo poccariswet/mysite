@@ -12,6 +12,10 @@
       href="https://speakerdeck.com/soeyusuke"
       target="_blank"
       class="button--speakerdeck">Speaker Deck</a>
+    <a
+      href="https://twitter.com/poccariswet"
+      target="_blank"
+      class="button--twitter">twitter</a>
   </div>
 </template>
 
@@ -52,6 +56,18 @@
     &:hover {
       color: #fff;
       background-color: #35495e;
+    }
+  }
+  .button--twitter {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #62b2ee;
+    color: #62b2ee;
+    text-decoration: none;
+    padding: 10px 30px;
+    &:hover {
+      color: #fff;
+      background-color: #62b2ee;
     }
   }
 }
