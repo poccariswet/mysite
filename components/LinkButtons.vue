@@ -110,7 +110,5 @@
   94% { transform: translate(-1.5px, -0.5px) rotate(0.5deg); }
   96% { transform: translate(1.5px, 0.5px) rotate(-0.5deg); }
   98% { transform: translate(-0.5px, -1.5px) rotate(0.5deg); }
-    }
-  }
 }
 </style>
