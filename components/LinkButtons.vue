@@ -5,7 +5,7 @@
       target="_blank"
       class="button--github">GitHub</a>
     <a
-      href="https://speakerdeck.com/soeyusuke"
+      href="https://speakerdeck.com/soeyu"
       target="_blank"
       class="button--speakerdeck">Speaker Deck</a>
     <a
