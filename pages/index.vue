@@ -1,25 +1,25 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo class="my-logo"/>
-      <h1 class="title">
-        poccariswet
-      </h1>
-      <h2 class="subtitle">
-      </h2>
-      <LinkButtons/>
-    </div>
-  </section>
+  <div class="app">
+    <section class="container">
+      <div>
+        <app-logo/>
+        <Overview/>
+        <LinkButtons/>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import LinkButtons from '~/components/LinkButtons.vue'
+import Overview from '~/components/Overview.vue'
 
 export default {
   components: {
     AppLogo,
-    LinkButtons
+    LinkButtons,
+    Overview
   }
 }
 </script>
