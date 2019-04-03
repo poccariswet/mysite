@@ -11,7 +11,7 @@
 <style lang="scss" scoped>
 .username{
   color:#fff;
-  font-size:60px;
+  font-size:3em;
   position:relative;
   margin:auto;
   font-family: "montserrat",sans-serif;

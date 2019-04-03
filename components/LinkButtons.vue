@@ -1,80 +1,82 @@
 <template>
-  <div class=links>
-    <a
-      href="https://github.com/poccariswet"
-      target="_blank"
-      class="button--github">GitHub</a>
-    <a
-      href="https://speakerdeck.com/soeyu"
-      target="_blank"
-      class="button--speakerdeck">Speaker Deck</a>
-    <a
-      href="https://twitter.com/poccariswet"
-      target="_blank"
-      class="button--twitter">twitter</a>
-    <a
-      href="https://twitch.tv/poccariswet"
-      target="_blank"
-      class="button--twitch">twitch</a>
+  <div class=link>
+    <div class=links>
+      <a
+        href="https://github.com/poccariswet"
+        class="iconbtn fab fa-github"></a>
+      <a
+        href="https://speakerdeck.com/soeyu"
+        class="iconbtn fab fa-speaker-deck"></a>
+      <a
+        href="https://twitter.com/poccariswet"
+        class="iconbtn fab fa-twitter"></a>
+      <a
+        href="https://twitch.tv/poccariswet"
+        class="iconbtn fab fa-twitch"> </a>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.links {
-  padding-top: 15px;
-  .button--speakerdeck {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #3b8070;
-    color: #3b8070;
-    text-decoration: none;
-    padding: 10px 30px;
-    &:hover {
-      color: #fff;
-      background-color: #3b8070;
-      animation: shake 1.9s infinite;
-    }
-  }
-  .button--github {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #35495e;
-    color: #35495e;
-    text-decoration: none;
-    padding: 10px 30px;
-    &:hover {
-      color: #fff;
-      background-color: #35495e;
-      animation: shake 1.9s infinite;
-    }
-  }
-  .button--twitter {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #62b2ee;
-    color: #62b2ee;
-    text-decoration: none;
-    padding: 10px 30px;
-    &:hover {
-      color: #fff;
-      background-color: #62b2ee;
-      animation: shake 1.9s infinite;
-    }
-  }
-  .button--twitch {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #473978;
-    color: #473978;
-    text-decoration: none;
-    padding: 10px 30px;
-    &:hover {
-      color: #fff;
-      background-color: #473978;
-      animation: shake 1.9s infinite;
+<script>
+export default {
+  head() {
+    return {
+      link: [
+        { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css' },
+      ]
     }
   }
 }
+</script>
+
+<style lang="scss" scoped>
+.iconbtn {
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  margin: 20px;
+  position: relative;
+  font-size: 40px;
+}
+
+.iconbtn::before {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconbtn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.links .iconbtn {
+  border: 3px #fff;
+  color: #34495e;
+}
+
+.links .iconbtn::after {
+  background: #fff;
+  transition: 0.4s;
+}
+.links .iconbtn:hover::after{
+  transform: scale(1.3);
+  opacity: 0;
+}
+.links .iconbtn:hover {
+  color: #fff;
+  animation: shake 1.9s infinite;
+}
+
 
 @keyframes shake {
   0% { transform: translate(0px, 0px) rotate(0deg); }
