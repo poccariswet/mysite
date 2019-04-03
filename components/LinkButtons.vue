@@ -12,6 +12,10 @@
       href="https://twitter.com/poccariswet"
       target="_blank"
       class="button--twitter">twitter</a>
+    <a
+      href="https://twitch.tv/poccariswet"
+      target="_blank"
+      class="button--twitch">twitch</a>
   </div>
 </template>
 
@@ -54,6 +58,19 @@
     &:hover {
       color: #fff;
       background-color: #62b2ee;
+      animation: shake 1.9s infinite;
+    }
+  }
+  .button--twitch {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #473978;
+    color: #473978;
+    text-decoration: none;
+    padding: 10px 30px;
+    &:hover {
+      color: #fff;
+      background-color: #473978;
       animation: shake 1.9s infinite;
     }
   }

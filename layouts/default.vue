@@ -14,13 +14,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background: #000;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
 }
-
 
 </style>
 
