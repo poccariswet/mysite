@@ -10,51 +10,53 @@
 
 <style lang="scss" scoped>
 .username{
-  color:grey;
-  font-size:100px;
+  color:#fff;
+  font-size:60px;
   position:relative;
   margin:auto;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
 }
 
-@keyframes noise-anim{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(100)+px,9999px,random(100)+px,0);
-    }
-  }
-}
-.username:after{
-  content:attr(data-text);
-  position:absolute;
-  left:2px;
-  text-shadow:-1px 0 red;
-  top:0;
-  color:grey;
-  background:white;
-  overflow:hidden;
-  clip:rect(0,900px,0,0);
-  animation:noise-anim 2s infinite linear alternate-reverse;
+.username::before,.username::after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes noise-anim-2{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(100)+px,9999px,random(100)+px,0);
-    }
-  }
+.username::before {
+  color: #ff00c1;
+  animation: glitch-effect 3s infinite;
 }
-.username:before{
-  content:attr(data-text);
-  position:absolute;
-  left:-2px;
-  text-shadow:1px 0 blue;
-  top:0;
-  color:grey;
-  background:white;
-  overflow:hidden;
-  clip:rect(0,900px,0,0);
-  animation:noise-anim-2 3s infinite linear alternate-reverse;
+
+.username::before {
+  color: #3498db;
+  animation: glitch-effect 3s infinite;
+}
+
+@keyframes glitch-effect {
+  0% {
+    left: -3px;
+    top: -3px;
+  }
+  25% {
+    left: 3px;
+    top: 0px;
+  }
+  50% {
+    left: -2px;
+    top: 3px;
+  }
+  75% {
+    left: 2px;
+    top: -2px;
+  }
+  100% {
+    left: 0px;
+    top: -3px;
+  }
 }
 </style>
