@@ -5,7 +5,7 @@
         href="https://github.com/poccariswet"
         class="iconbtn fab fa-github"></a>
       <a
-        href="https://speakerdeck.com/soeyu"
+        href="https://speakerdeck.com/poccariswet"
         class="iconbtn fab fa-speaker-deck"></a>
       <a
         href="https://twitter.com/poccariswet"
