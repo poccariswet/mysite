@@ -1,13 +1,33 @@
 <template>
-  <div class="glitch-image">
-    <div class="glitch">
-      <div class="glitch-inner">
-        <div class="glitch-inner-2">
+  <div class="app-logo">
+    <div class="glitch-image" @click="open = true">
+      <div class="glitch">
+        <div class="glitch-inner">
+          <div class="glitch-inner-2">
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="modal" v-bind:class="{ 'is-active': open }">
+      <div class="modal-background" v-on:click="open = false"></div>
+      <div class="modal-content">
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import StreamVideo from '~/components/StreamVideo.vue'
+export default {
+  name: 'app-logo',
+  components: {
+    StreamVideo
+  },
+  data() {
+    return { open: false }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @keyframes noise-anim{

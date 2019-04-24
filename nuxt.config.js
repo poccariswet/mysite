@@ -13,17 +13,22 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
   },
-  /*
-  ** Customize the progress bar color
-  */
   loading: { color: '#3B8070' },
-   /*
-  ** Build configuration
-  */
+  css: [
+    { src: 'bulma/bulma.sass', lang: 'sass' }
+  ],
+  modules: [
+    '@nuxtjs/bulma',
+    '@nuxtjs/font-awesome'
+  ],
   build: {
-    /*
-    ** Run ESLint on save
-    */
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': {
+          warnings: false
+        }
+      }
+    },
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({

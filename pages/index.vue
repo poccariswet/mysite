@@ -3,8 +3,8 @@
     <section class="container">
       <div class="parts">
         <app-logo/>
-        <Overview style="margin-top:2em;" />
-        <LinkButtons/>
+        <overview style="margin-top:2em;" />
+        <link-buttons/>
       </div>
     </section>
   </div>
