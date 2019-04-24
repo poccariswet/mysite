@@ -13,6 +13,9 @@
       <a
         href="https://twitch.tv/poccariswet"
         class="iconbtn fab fa-twitch"> </a>
+      <a
+        href="https://www.youtube.com/channel/UCb_X0yMWrmPlc7ctApLXNvA"
+        class="iconbtn fab fa-youtube"> </a>
     </div>
   </div>
 </template>
