@@ -1,5 +1,8 @@
 <template>
   <div class="app-logo">
+    <div class="click-me">
+      <img src="../assets/clickme2.png"/>
+    </div>
     <div class="glitch-image" @click="open">
       <div class="glitch">
         <div class="glitch-inner">
@@ -39,6 +42,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.app-logo {
+  width: 100%;
+}
+
+.click-me {
+  position: absolute;
+  z-index: 2;
+}
+
+.click-me img {
+  width: 190px;
+  height: 190px;
+}
+
 @keyframes noise-anim{
   $steps: 20;
   @for $i from 0 through $steps{
@@ -73,10 +90,12 @@ export default {
 }
 
 .glitch, .glitch-inner, .glitch-inner-2 {
- width: 300px;
- height: 300px;
- background-image: url("../assets/corgi.png");
- background-size: cover;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url("../assets/corgi.png");
+  background-size: cover;
+  z-index: 1;
 }
 
 .glitch {
