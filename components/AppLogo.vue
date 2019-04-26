@@ -75,7 +75,7 @@ export default {
 .glitch, .glitch-inner, .glitch-inner-2 {
  width: 300px;
  height: 300px;
- background-image: url(https://avatars1.githubusercontent.com/u/24663217?s=400&u=106ed535246c47bf666ed9e59ec15f6b7399e3c7&v=4);
+ background-image: url("../assets/corgi.png");
  background-size: cover;
 }
 
