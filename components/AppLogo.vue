@@ -1,13 +1,42 @@
 <template>
-  <div class="glitch-image">
-    <div class="glitch">
-      <div class="glitch-inner">
-        <div class="glitch-inner-2">
+  <div class="app-logo">
+    <div class="glitch-image" @click="open">
+      <div class="glitch">
+        <div class="glitch-inner">
+          <div class="glitch-inner-2">
+          </div>
         </div>
       </div>
     </div>
+    <modal @close="close" v-if="modal">
+      <iframe width="640" height="360" :src="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </modal>
   </div>
 </template>
+
+<script>
+import Modal from '~/components/Modal.vue'
+export default {
+  name: 'app-logo',
+  components: {
+    Modal
+  },
+  data () {
+    return {
+      modal: false,
+      url: "https://www.youtube.com/embed/JZd4WjGdySA"
+    }
+  },
+  methods: {
+    open() {
+      this.modal = true
+    },
+    close() {
+      this.modal = false
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @keyframes noise-anim{
