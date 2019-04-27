@@ -1,7 +1,7 @@
 <template>
   <div class="app-logo">
     <div class="click-me">
-      <img src="../assets/clickme2.png"/>
+      <img src="https://user-images.githubusercontent.com/24663217/56853153-ceddde80-695e-11e9-939e-8f310a4574e1.png"/>
     </div>
     <div class="glitch-image" @click="open">
       <div class="glitch">
@@ -105,7 +105,7 @@ export default {
   position: absolute;
   width: 300px;
   height: 300px;
-  background-image: url("../assets/corgi.png");
+  background-image: url(https://user-images.githubusercontent.com/24663217/56853147-c1285900-695e-11e9-83dc-930bbaefd357.png);
   background-size: cover;
   z-index: 1;
 }
