@@ -19,6 +19,8 @@
 
 <script>
 import Modal from '~/components/Modal.vue'
+import firebase from '~/plugins/firebase'
+
 export default {
   name: 'app-logo',
   components: {
@@ -27,8 +29,11 @@ export default {
   data () {
     return {
       modal: false,
-      url: "https://www.youtube.com/embed/JZd4WjGdySA"
+      url: ''
     }
+  },
+  mounted() {
+    this.fetchURL()
   },
   methods: {
     open() {
@@ -36,6 +41,13 @@ export default {
     },
     close() {
       this.modal = false
+    },
+    fetchURL() {
+      firebase.firestore().collection('stream').get().then( data => {
+        data.forEach(doc => {
+          this.url = doc.data().url
+        })
+      })
     }
   }
 }
