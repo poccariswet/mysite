@@ -16,6 +16,9 @@
       <a
         href="https://www.youtube.com/channel/UCb_X0yMWrmPlc7ctApLXNvA"
         class="iconbtn fab fa-youtube"> </a>
+      <a
+        href="https://medium.com/@poccariswet"
+        class="iconbtn fab fa-medium"></a>
     </div>
   </div>
 </template>

@@ -1,8 +1,5 @@
 <template>
   <div class="app-logo">
-    <div class="click-me">
-      <img src="https://user-images.githubusercontent.com/24663217/56853153-ceddde80-695e-11e9-939e-8f310a4574e1.png"/>
-    </div>
     <div class="glitch-image" @click="open">
       <div class="glitch">
         <div class="glitch-inner">
